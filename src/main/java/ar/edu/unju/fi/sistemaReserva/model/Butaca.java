@@ -1,4 +1,4 @@
-﻿package ar.edu.unju.fi.sistemaReserva.model;
+package ar.edu.unju.fi.sistemaReserva.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
