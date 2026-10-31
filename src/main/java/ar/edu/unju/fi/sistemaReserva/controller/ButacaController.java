@@ -16,7 +16,7 @@ import ar.edu.unju.fi.sistemaReserva.service.ButacaService;
 
 @RestController
 @RequestMapping("/api/butacas")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:5174")
 public class ButacaController {
 
     private final ButacaService butacaService;
