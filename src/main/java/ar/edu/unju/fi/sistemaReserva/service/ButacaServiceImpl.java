@@ -13,13 +13,14 @@ public class ButacaServiceImpl implements ButacaService {
 
 	private final ButacaRepository butacaRepository;
 
-	// mapa de semaforos: un Semaphore por cada butaca (por ID)
+	// mapa para guardar un semaforo por cada butaca
 	private final ConcurrentHashMap<Integer, Semaphore> semaforos = new ConcurrentHashMap<>();
 
 	public ButacaServiceImpl(ButacaRepository butacaRepository) {
 		this.butacaRepository = butacaRepository;
 	}
 
+	// busca el semaforo de la butaca y si no existe lo crea con 1 permiso
 	private Semaphore getSemaforo(Integer butacaId) {
 		return semaforos.computeIfAbsent(butacaId, id -> new Semaphore(1));
 	}
