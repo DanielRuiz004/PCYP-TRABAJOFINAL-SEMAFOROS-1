@@ -47,7 +47,7 @@ public class ButacaController {
         return ResponseEntity.ok(butacaService.guardar(butaca));
     }
 
-    // POST /api/butacas/{id}/reservar - reservar una butaca (usa el semaforo)
+    // POST /api/butacas/{id}/reservar - reservar una butaca. usa el semaforo
     @PostMapping("/{id}/reservar")
     public ResponseEntity<String> reservar(@PathVariable Integer id) {
         boolean resultado = butacaService.reservarButaca(id);
